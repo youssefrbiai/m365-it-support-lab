@@ -1,6 +1,3 @@
-README.md
-
-```markdown
 # M365 IT Support Administration Lab — yousef
 
 > A 10-ticket, hands-on IT support project simulating a full Tier 1 helpdesk
@@ -66,7 +63,6 @@ README.md
 
 ## Repository Structure
 
-```
 M365-IT-Support-Lab/
 ├── README.md                          ← you are here
 ├── 00_Context/
@@ -84,7 +80,6 @@ M365-IT-Support-Lab/
 │   ├── TKT-008-mfa-lockout-security-event.md
 │   ├── TKT-009-license-revocation-access-loss.md
 │   └── TKT-010-monday-storm-final-exam.md
-```
 
 ## Roadmap
 - [x] Project Charter
@@ -100,4 +95,3 @@ M365-IT-Support-Lab/
 
 *Every ticket documents real execution or honestly-labeled knowledge work.
 Mistakes are included on purpose — they are the evidence of learning.*
-```

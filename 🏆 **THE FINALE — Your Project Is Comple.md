@@ -1,6 +1,4 @@
-README.md
 
-```markdown
 # M365 IT Support Administration Lab — yousef
 
 > A 10-ticket, hands-on IT support project simulating a full Tier 1 helpdesk
@@ -36,10 +34,8 @@ README.md
 ## Key Competencies Demonstrated
 
 **Hands-on (executed on the DC):**
-- AD user lifecycle: create → groups → reset → block → delete
-  (`New-ADUser`, `Set-ADAccountPassword`, `Enable/Disable-ADAccount`, group management)
-- Account forensics: `Get-ADUser -Properties *` (Enabled, LockedOut,
-  BadLogonCount, LastLogonDate)
+- AD user lifecycle: create → groups → reset → block → delete (`New-ADUser`, `Set-ADAccountPassword`, `Enable/Disable-ADAccount`, group management)
+- Account forensics: `Get-ADUser -Properties *` (Enabled, LockedOut, BadLogonCount, LastLogonDate)
 - Security containment: disable + password reset under suspected/confirmed compromise
 - Service management: Print Spooler root-cause cleaning (stop → clear → start)
 - Reference-user comparison: `Compare-Object` against known-good access patterns
@@ -48,7 +44,7 @@ README.md
 - Admin Center user/license flows, SSPR, MFA re-registration, TAP
 - Conditional Access (Named Locations, legacy auth blocking)
 - Shared mailbox conversion, license data-retention rules, group-based licensing
-- On-prem ↔ cloud mapping documented per ticket
+- On-prem ↔ cloud mapping for every operation (documented per ticket)
 
 **Professional discipline:**
 - Full ticket documentation with honest dead-ends and artifacts
@@ -58,46 +54,32 @@ README.md
 
 ## Key Incidents Worth Reading
 - **TKT-002:** why `BadLogonCount = 0` disproved the user's story
-- **TKT-006 → TKT-010:** how one skipped checklist step (enabled dormant account)
-  returned as a 3 AM confirmed compromise
+- **TKT-006 → TKT-010:** how one skipped checklist step (enabled dormant account) returned as a 3 AM confirmed compromise
 - **TKT-007:** the disable + reset defense-in-depth pattern
+```
 
 ---
 
-## Repository Structure
+## 📦 Deliverable 2 — Project Retrospective
 
-```
-M365-IT-Support-Lab/
-├── README.md                          ← you are here
-├── 00_Context/
-│   ├── PROJECT-STATE.md               ← running project record
-│   ├── ENVIRONMENT.md                 ← lab environment documentation (v1.1)
-│   └── RETROSPECTIVE.md               ← growth, mistakes, interview story
-├── 04_Incident_Tickets/
-│   ├── TKT-001-user-lifecycle-script-failure.md
-│   ├── TKT-002-account-access-investigation.md
-│   ├── TKT-003-password-reset-identity-verification.md
-│   ├── TKT-004-group-access-intermittent.md
-│   ├── TKT-005-printer-deescalation.md
-│   ├── TKT-006-new-hire-onboarding.md
-│   ├── TKT-007-offboarding-departure.md
-│   ├── TKT-008-mfa-lockout-security-event.md
-│   ├── TKT-009-license-revocation-access-loss.md
-│   └── TKT-010-monday-storm-final-exam.md
-```
+Answer these in `00_Context/RETROSPECTIVE.md` — **in your own words**, because you will literally reuse these answers in interviews:
 
-## Roadmap
-- [x] Project Charter
-- [x] VM / Domain Controller verification
-- [x] Microsoft 365 fundamentals (Microsoft Learn)
-- [x] 10-incident ticket series with full documentation
-- [x] Retrospective + portfolio packaging
-- [ ] M365 trial tenant (Developer Program) — convert knowledge-based tickets to hands-on
-- [ ] MS-900: Microsoft 365 Fundamentals certification
-- [ ] MD-102 (Endpoint Administrator) or SC-900 (Security)
+1. **The growth question:** What could you do after TKT-010 that you couldn't do before TKT-001? Name at least 3 concrete things (not "learned PowerShell" — be specific: *"I can look at `Enabled: False, BadLogonCount: 0` and know the password was never checked"*).
+2. **The mistake question:** What was your most instructive mistake in this project? (You have a rich menu: the typo, the skipped disable step, the plaintext passwords, the Robert/contractor mix-up. Pick one and tell its story properly — interviewers ask this to see if you *learn*, not if you're perfect.)
+3. **The interview question:** In 60 seconds, tell the story of TKT-006 → TKT-010 as one narrative. That's your strongest interview asset — a self-built cause-and-effect arc nobody could fabricate.
 
 ---
 
-*Every ticket documents real execution or honestly-labeled knowledge work.
-Mistakes are included on purpose — they are the evidence of learning.*
-```
+## 🎓 My Final Assessment — Honest
+
+**What you built:** a genuinely respectable foundation. The triage instinct (risk over noise), the evidence-over-stories habit, the containment reflex, and the communication scripts — those are the things that make a Tier 1 tech promotable. Your ticket folder is a real portfolio.
+
+**What's still true (from your own Environment Doc):** no M365 tenant hands-on. Your AD work is the closest free analog, but interviewers for M365 roles will ask Admin Center specifics.
+
+**Recommended next steps, in order:**
+1. **Retry the M365 Developer Program** (or a trial tenant) — free sandbox = your tickets 006–009 become hands-on too
+2. **MS-900** (Microsoft 365 Fundamentals) cert — cheap, achievable now, signals commitment
+3. Then **MD-102** (Endpoint Administrator) or SC-900 (Security) depending on direction
+4. Keep the streak habit: one Learn module or lab touch per day
+
+---
